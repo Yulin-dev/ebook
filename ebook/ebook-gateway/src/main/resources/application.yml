@@ -1,0 +1,14 @@
+server:
+  port: 1009
+spring:
+  application:
+    name: ebook-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:1008/eureka
+    registry-fetch-interval-seconds: 10
+zuul:
+  prefix: /api
+  routes:
+    item-service: /item/** # 添加商品微服务的路由

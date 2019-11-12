@@ -1,0 +1,11 @@
+server:
+  port: 1008
+spring:
+  application:
+    name: ebook-registry
+eureka:
+  client:
+    server-url:
+      defaultZone: http://127.0.0.1:${server.port}
+    register-with-eureka: false
+    fetch-registry: false
